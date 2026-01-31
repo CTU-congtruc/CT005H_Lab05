@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title> Infographic và Video </title>
+</head>
+<body>
+    <div class="container">
+        <button class="toggle" role="switch" checked="false" index="0">
+            <div class="toggle-circle">
+                <script>
+                    const toggleElement = document.querySelector('.toggle');
+                    toggleElement.addEventListener('click', () => {
+                        toggleElement.classList.add('touched');
+                        const isChecked = toggleElement.getAttribute('checked') === 'true';
+                        toggleElement.setAttribute('checked', !isChecked);
+                    });
+                </script>
+            </div>
+        </button>
+        <header>
+            <h1>🎨 Infographic & Video </h1>
+            <p class="header-description">
+                Trang web giới thiệu kết hợp infographic trực quan và video YouTube hấp dẫn. 
+                Khám phá nội dung đa phương tiện phong phú và dễ hiểu.
+            </p>
+        </header>
+
+        <!-- Infographic Section -->
+        <div class="content-section">
+            <h2 class="section-title">📊 Infographic</h2>
+            <p class="section-description">
+                Infographic dưới đây minh họa dữ liệu một cách trực quan, giúp người xem dễ dàng 
+                nắm bắt thông tin phức tạp thông qua hình ảnh, biểu đồ và thiết kế sáng tạo.
+            </p>
+
+            <div class="infographic-container">
+                <img src="Lab5_Ex2.1.png" alt="Infographic minh họa dữ liệu">
+            </div>
+        </div>
+
+        <!-- Video Section -->
+        <div class="content-section">
+            <h2 class="section-title">🎬 Video YouTube</h2>
+            <p class="section-description">
+                Video ngắn giới thiệu lợi ích công nghệ số, sử dụng tài liệu miễn phí bản quyền.
+            </p>
+
+            <div class="video-container">
+                <div class="video-wrapper">
+                    <iframe 
+                        src="Lab5_Ex2.2.mp4" 
+                        title="YouTube video player" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="copyright">
+                <p>
+                    <strong> Website được tạo ra bởi Github Copilot/Claude AI (CC0)</strong>
+                </p>
+                <p> Tất cả không thuộc bản quyền của cá nhân hay tập thể nào. </p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
